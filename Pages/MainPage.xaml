@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UMAttendanceSystem_Mobile.MainPage"
+             IconImageSource="appiconfgum.png"
+             Title="Attendance QR">
+
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10,0"
+            Spacing="25"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center">
+
+            <Image Source="umlogo.png"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Start" />
+
+            <Label Text="Generated QR Code"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="This QR code is generated automatically."
+                FontSize="18"
+                HorizontalOptions="Center"/>
+            <Border 
+                BackgroundColor="White" 
+                Padding="5,0"
+                HorizontalOptions="Center">
+
+                <Image x:Name="QRCodeImage"
+                       HeightRequest="300"
+                       WidthRequest="300"
+                       HorizontalOptions="Center"/>
+            </Border>
+            <ProgressBar x:Name="TimerBar"
+                   HeightRequest="20"
+                   WidthRequest="300"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   ProgressColor="Green" />  
+            <Label x:Name="TimerLabel"
+                   Text="5:00"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="18"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
